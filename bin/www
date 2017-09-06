@@ -4,9 +4,18 @@
  * Module dependencies.
  */
 
+const cluster = require('cluster');
 var app = require('../app');
+var dns = require('../dns');
 var debug = require('debug')('express:server');
 var http = require('http');
+
+/**
+ * Run dns server.
+ */
+
+console.log('starting server...');
+dns.serve(53, '0.0.0.0', onError);
 
 /**
  * Get port from environment and store in Express.
@@ -54,6 +63,7 @@ function normalizePort(val) {
  */
 
 function onError(error) {
+  console.log('error ' + error);
   if (error.syscall !== 'listen') {
     throw error;
   }
