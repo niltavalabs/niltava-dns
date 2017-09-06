@@ -1,7 +1,7 @@
 {
-  "name": "nilsport-team-service",
+  "name": "niltava-dns",
   "version": "1.0.0",
-  "description": "Niltava Sport handle team services.",
+  "description": "NiltavaDNS is a DNS management console built with node.",
   "main": "index.js",
   "private": true,
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@gitrepo.mapmu.com:afrisalyp/nilsport-team-service.git"
+    "url": "git@gitrepo.mapmu.com:afrisalyp/niltava-dns.git"
   },
   "author": "Afrisal Yodi Purnama",
   "license": "ISC",
@@ -22,6 +22,6 @@
     "morgan": "~1.7.0",
     "compression": "~1.6.2",
     "moment": "~2.18.1",
-    "niltava": "git+ssh://git@gitrepo.mapmu.com:afrisalyp/niltava.git"
+    "native-dns": "~0.7.0"
   }
 }
