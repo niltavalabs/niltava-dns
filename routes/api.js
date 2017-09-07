@@ -13,6 +13,8 @@ var Record = require('../models/record');
 var sessionStorage = {};
 var verificationCodes = {};
 
+var DEVELOPMENT_MODE = process.env.NODE_ENV == 'development';
+
 router.use(function (req, res, next) {
   req.authorized = false;
   var authorization = req.headers.authorization;
@@ -24,7 +26,7 @@ router.use(function (req, res, next) {
     req.userId = userId;
   }
 
-  if(process.env.DEVELOPMENT) {
+  if(DEVELOPMENT_MODE) {
     req.authorized = true;
     req.userId = 'dkflepxcmd';    
   }
