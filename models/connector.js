@@ -1,7 +1,8 @@
 var mongoose = require('mongoose');
-//mongoose.connect('mongodb://localhost/nilnews', { config: { autoIndex: false } });
 mongoose.Promise = require('q').Promise;
 
-var dbname = process.env.DB_NAME || 'niltava';
+var dbname = process.env.DB_NAME || 'niltava-dns';
+var dbhost = process.env.DB_HOST || 'localhost';
+var dbport = process.env.DB_PORT || '27017';
 
-mongoose.connect('mongodb://localhost/' + dbname, { config: { } });
+mongoose.connect('mongodb://' + dbhost + ':' + dbport + '/' + dbname, { config: { } });
