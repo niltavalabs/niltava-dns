@@ -29,7 +29,7 @@ server.on('request', function (request, response) {
     ttl: 600,
   }));
 
-  Record.findByName(req.params.name, function(err, records) {
+  Record.findByName(request.question[0].name, function(err, records) {
     for(var i = 0; i < records.length; i++) {
       var record = records[i];
       var dnsValue = record.value;
