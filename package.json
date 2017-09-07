@@ -23,6 +23,7 @@
     "compression": "~1.6.2",
     "moment": "~2.18.1",
     "native-dns": "~0.7.0",
-    "mongoose": "^4.9.0"
+    "mongoose": "^4.9.0",
+    "q": "^1.4.1"    
   }
 }
