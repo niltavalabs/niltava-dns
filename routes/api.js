@@ -16,6 +16,12 @@ var verificationCodes = {};
 var DEVELOPMENT_MODE = process.env.NODE_ENV == 'development';
 
 router.use(function (req, res, next) {
+  if(DEVELOPMENT_MODE) {
+    req.authorized = true;
+    req.userId = 'dkflepxcmd';    
+    return next();
+  }
+
   req.authorized = false;
   var authorization = req.headers.authorization;
   if(!authorization) return next();
@@ -25,12 +31,6 @@ router.use(function (req, res, next) {
     req.authorized = true;
     req.userId = userId;
   }
-
-  if(DEVELOPMENT_MODE) {
-    req.authorized = true;
-    req.userId = 'dkflepxcmd';    
-  }
-
   next();
 });
 
