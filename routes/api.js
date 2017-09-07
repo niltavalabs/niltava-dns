@@ -23,6 +23,12 @@ router.use(function (req, res, next) {
     req.authorized = true;
     req.userId = userId;
   }
+
+  if(process.env.DEVELOPMENT) {
+    req.authorized = true;
+    req.userId = 'dkflepxcmd';    
+  }
+
   next();
 });
 
