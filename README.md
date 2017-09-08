@@ -12,9 +12,9 @@ TODO
 
   - [PUT /domain](#put-domain)
   - [GET /domain](#get-domain)
-  - [PUT /domain/[domain]/record](#put-domain-record)
-  - [GET /domain/[domain]/record](#get-domain-record)
-  - [GET /record/[name]](#get-record)
+  - [PUT /domain/[domain]/record](#put-domaindomainrecord)
+  - [GET /domain/[domain]/record](#get-domaindomainrecord)
+  - [GET /record/[name]](#get-recordname)
 
 ### PUT /domain
 
