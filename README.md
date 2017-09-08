@@ -22,17 +22,19 @@ Example: https://niltava.co.id/api/v1/domain
 
 Header:
 
-  - Authorization: userid:auth
-  - Content-Type: application/json
+	- Authorization: userid:auth
+	- Content-Type: application/json
 
 Request body:
 
+```json
   {
     "domain": {
       "name": "niltava.co.id",
       "type": "public"
     }
   }
+```
 
 ### GET /domain
 
@@ -40,11 +42,12 @@ Example: https://niltava.co.id/api/v1/domain
 
 Header:
 
-  - Authorization: userid:auth
-  - Content-Type: application/json
+	- Authorization: userid:auth
+	- Content-Type: application/json
 
 Response body:
 
+```json
   {
     "domains": [
       {
@@ -56,6 +59,7 @@ Response body:
       }
     ]
   }
+```
 
 ### PUT /domain/[domain]/record
 
@@ -63,11 +67,12 @@ Example: https://niltava.co.id/api/v1/domain/niltava.co.id/record
 
 Header:
 
-  - Authorization: userid:auth
-  - Content-Type: application/json
+	- Authorization: userid:auth
+	- Content-Type: application/json
 
 Request body:
 
+```json
   {
     "record": {
       "name": "andi.niltava.co.id",
@@ -78,6 +83,7 @@ Request body:
       }
     }
   }
+```
 
 ### GET /domain/[domain]/record
 
@@ -85,11 +91,12 @@ Example: https://niltava.co.id/api/v1/domain/niltava.co.id/record
 
 Header:
 
-  - Authorization: userid:auth
-  - Content-Type: application/json
+	- Authorization: userid:auth
+	- Content-Type: application/json
 
 Response body:
 
+```json
   {
       "records": [
           {
@@ -143,6 +150,7 @@ Response body:
           }
       ]
   }
+```
 
 ### GET /record/[name]
 
@@ -150,10 +158,12 @@ Example: https://niltava.co.id/api/v1/record/andi.niltava.co.id
 
 Header:
 
-  - Authorization: userid:auth
-  - Content-Type: application/json
+	- Authorization: userid:auth
+	- Content-Type: application/json
 
 Response body:
+
+```json
   {
     "records": [
         {
@@ -169,3 +179,4 @@ Response body:
         }
     ]
 }
+```
