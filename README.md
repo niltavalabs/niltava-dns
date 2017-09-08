@@ -21,8 +21,9 @@
 Example: https://niltava.co.id/api/v1/domain
 
 Header:
-	Authorization: userid:auth
-	Content-Type: application/json
+	
+	- Authorization: userid:auth
+	- Content-Type: application/json
 
 Request body:
 
@@ -38,8 +39,9 @@ Request body:
 Example: https://niltava.co.id/api/v1/domain
 
 Header:
-	Authorization: userid:auth
-	Content-Type: application/json
+
+	- Authorization: userid:auth
+	- Content-Type: application/json
 
 Response body:
 
