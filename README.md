@@ -1,9 +1,42 @@
 # niltava-dns, RESTful-based managed DNS
 
 * [Installation](#installation)
+* [What's next](#whats-next)
 * [API Documentations](#api-documentations)
 
 ## Installation
+###1. Install prerequisites
+You need to have ```nodejs``` and ```npm``` installed to run ```niltava-dns```. If you have not installed the apps before, you can follow [this instruction](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04).
+
+If you want to deploy or run the service in background, install ```forever``` module from ```npm```
+
+```
+sudo npm install -g forever
+```
+
+###2. Clone the repository
+``` 
+git clone https://github.com/niltavalabs/niltava-dns.git
+```
+
+###3. Install packages
+```
+cd niltava-dns
+npm install
+```
+
+###4. Start or deploy service
+You can just start the service in foreground or deploy it in background. For start in foreground, you can execute ```npm start```.
+
+You need to be a ```sudoer``` to deploy it since opening DNS server port (53) requires super user permission. These are complete commands
+
+```
+sudo bash
+npm deploy
+```
+
+
+## What's next?
 TODO
 
 ## API Documentations
@@ -18,7 +51,7 @@ TODO
 
 ### PUT /domain
 
-Example: https://niltava.co.id/api/v1/domain
+Example: https://dns.mapmu.com/api/v1/domain
 
 Header:
 
@@ -38,7 +71,7 @@ Request body:
 
 ### GET /domain
 
-Example: https://niltava.co.id/api/v1/domain
+Example: https://dns.mapmu.com/api/v1/domain
 
 Header:
 
@@ -63,7 +96,7 @@ Response body:
 
 ### PUT /domain/[domain]/record
 
-Example: https://niltava.co.id/api/v1/domain/niltava.co.id/record
+Example: https://dns.mapmu.com/api/v1/domain/niltava.co.id/record
 
 Header:
 
@@ -87,7 +120,7 @@ Request body:
 
 ### GET /domain/[domain]/record
 
-Example: https://niltava.co.id/api/v1/domain/niltava.co.id/record
+Example: https://dns.mapmu.com/api/v1/domain/niltava.co.id/record
 
 Header:
 
@@ -154,7 +187,7 @@ Response body:
 
 ### GET /record/[name]
 
-Example: https://niltava.co.id/api/v1/record/andi.niltava.co.id
+Example: https://dns.mapmu.com/api/v1/record/andi.niltava.co.id
 
 Header:
 

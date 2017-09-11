@@ -5,8 +5,8 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "start": "PORT=3005 node ./bin/www",
-    "deploy": "PORT=3305 NODE_ENV=production DB_NAME=atexlqfx forever start bin/www"
+    "start": "PORT=3303 NODE_ENV=development sudo nodejs ./bin/www",
+    "deploy": "PORT=3303 NODE_ENV=production DB_NAME=ndlawpfa forever start bin/www"
   },
   "repository": {
     "type": "git",
