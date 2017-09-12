@@ -65,7 +65,7 @@ Finally, you can manage your domain with a RESTful API. By default, niltava-dns 
 
 ### PUT /domain
 
-Example: https://ns.mapmu.com/api/v1/domain
+Example: http://ns.mapmu.com:3303/api/v1/domain
 
 Header:
 
@@ -85,7 +85,7 @@ Request body:
 
 ### GET /domain
 
-Example: https://ns.mapmu.com/api/v1/domain
+Example: http://ns.mapmu.com:3303/api/v1/domain
 
 Header:
 
@@ -110,7 +110,7 @@ Response body:
 
 ### PUT /domain/[domain]/record
 
-Example: https://ns.mapmu.com/api/v1/domain/niltava.co.id/record
+Example: http://ns.mapmu.com:3303/api/v1/domain/niltava.co.id/record
 
 Header:
 
@@ -134,7 +134,7 @@ Request body:
 
 ### GET /domain/[domain]/record
 
-Example: https://ns.mapmu.com/api/v1/domain/niltava.co.id/record
+Example: http://ns.mapmu.com:3303/api/v1/domain/niltava.co.id/record
 
 Header:
 
@@ -201,7 +201,7 @@ Response body:
 
 ### GET /record/[name]
 
-Example: https://ns.mapmu.com/api/v1/record/andi.niltava.co.id
+Example: http://ns.mapmu.com:3303/api/v1/record/andi.niltava.co.id
 
 Header:
 
