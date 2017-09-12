@@ -52,6 +52,7 @@ Here, you can tell it to use the name servers you added as the authoritative ser
 The changes might take awhile to propagate, but you should see the data from your name servers being used within the next 24-48 hours for most registrars.
 
 
+
 ## API Documentations
 
 ### API Resources
@@ -227,7 +228,7 @@ Response body:
 }
 ```
 
-##Development progress
-###Todo
+## Development progress
+### Todo
   - User admin account
   - Security
