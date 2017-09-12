@@ -51,7 +51,7 @@ Here, you can tell it to use the name servers you added as the authoritative ser
 
 The changes might take awhile to propagate, but you should see the data from your name servers being used within the next 24-48 hours for most registrars.
 
-
+Finally, you can manage your domain with a RESTful API. By default, niltava-dns RESTful API uses port ```3303```, you can specify manually by editing package.json start script and deploy it again.
 
 ## API Documentations
 
