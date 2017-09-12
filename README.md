@@ -1,8 +1,9 @@
-# niltava-dns, RESTful-based managed DNS
+# niltava-dns, RESTful-based managed DNS server
 
 * [Installation](#installation)
 * [What's next](#whats-next)
 * [API Documentations](#api-documentations)
+* [Development progress](#development-progress)
 
 ## Installation
 
@@ -11,17 +12,17 @@ You need to have ```nodejs``` and ```npm``` installed to run ```niltava-dns```. 
 
 If you want to deploy or run the service in background, install ```forever``` module from ```npm```
 
-```
+```bash
 sudo npm install -g forever
 ```
 
 ### Clone the repository
-``` 
+```bash
 git clone https://github.com/niltavalabs/niltava-dns.git
 ```
 
 ### Install packages
-```
+```bash
 cd niltava-dns
 npm install
 ```
@@ -31,13 +32,25 @@ You can just start the service in foreground or deploy it in background. For sta
 
 You need to be a ```sudoer``` to deploy it since opening DNS server port (53) requires super user permission. These are complete commands
 
-```
+```bash
 sudo bash
 npm deploy
 ```
 
 ## What's next?
-TODO
+Your name server should now be started. However, you still need to delegate authority for your domain to your name server.
+
+To do this, you will have to go to the website where you purchased your domain name. The interface and perhaps the terminology will be different depending on the domain name registrar that you used. Create ```A``` record to specify name servers domain and its IP address where the name server runs.
+
+![alt text](https://raw.githubusercontent.com/niltavalabs/niltava-dns/master/readme/img/1.png)
+
+Now, you should be able to use the service as your domain's name server.
+Here, you can tell it to use the name servers you added as the authoritative servers for your site:
+
+![alt text](https://raw.githubusercontent.com/niltavalabs/niltava-dns/master/readme/img/2.png)
+
+The changes might take awhile to propagate, but you should see the data from your name servers being used within the next 24-48 hours for most registrars.
+
 
 ## API Documentations
 
@@ -51,7 +64,7 @@ TODO
 
 ### PUT /domain
 
-Example: https://dns.mapmu.com/api/v1/domain
+Example: https://ns.mapmu.com/api/v1/domain
 
 Header:
 
@@ -71,7 +84,7 @@ Request body:
 
 ### GET /domain
 
-Example: https://dns.mapmu.com/api/v1/domain
+Example: https://ns.mapmu.com/api/v1/domain
 
 Header:
 
@@ -96,7 +109,7 @@ Response body:
 
 ### PUT /domain/[domain]/record
 
-Example: https://dns.mapmu.com/api/v1/domain/niltava.co.id/record
+Example: https://ns.mapmu.com/api/v1/domain/niltava.co.id/record
 
 Header:
 
@@ -120,7 +133,7 @@ Request body:
 
 ### GET /domain/[domain]/record
 
-Example: https://dns.mapmu.com/api/v1/domain/niltava.co.id/record
+Example: https://ns.mapmu.com/api/v1/domain/niltava.co.id/record
 
 Header:
 
@@ -187,7 +200,7 @@ Response body:
 
 ### GET /record/[name]
 
-Example: https://dns.mapmu.com/api/v1/record/andi.niltava.co.id
+Example: https://ns.mapmu.com/api/v1/record/andi.niltava.co.id
 
 Header:
 
@@ -213,3 +226,8 @@ Response body:
     ]
 }
 ```
+
+##Development progress
+###Todo
+  - User admin account
+  - Security
